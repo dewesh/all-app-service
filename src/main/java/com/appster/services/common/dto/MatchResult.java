@@ -6,22 +6,22 @@ import com.appster.services.common.enums.MatchAlgoEnum;
  * Created by dagraw2 on 6/26/18.
  */
 public class MatchResult extends Result {
-    private MatchAlgoEnum matchAlgoEnum;
+    private String matchAlgoEnum;
     private Boolean isMatched = false;
-    public MatchResult(Integer result, Float accuracy, MatchAlgoEnum matchAlgoEnum) {
+    public MatchResult(Integer result, Double accuracy, String matchAlgoEnum) {
         super(result, accuracy);
         this.matchAlgoEnum = matchAlgoEnum;
     }
 
-    public MatchAlgoEnum getMatchAlgoEnum() {
+    public String getMatchAlgoEnum() {
         return matchAlgoEnum;
     }
 
-    public void setMatchAlgoEnum(MatchAlgoEnum matchAlgoEnum) {
+    public void setMatchAlgoEnum(String matchAlgoEnum) {
         this.matchAlgoEnum = matchAlgoEnum;
     }
 
-    public MatchResult withMatchingAlgo(MatchAlgoEnum matchingAlgo) {
+    public MatchResult withMatchingAlgo(String matchingAlgo) {
         setMatchAlgoEnum(matchingAlgo);
         return this;
     }

@@ -1,8 +1,6 @@
 package com.appster.services.common.dto;
 
-import java.util.ArrayList;
 import java.util.HashSet;
-import java.util.List;
 import java.util.Set;
 
 /**
@@ -10,7 +8,7 @@ import java.util.Set;
  */
 public class MatchingAppResponse {
     private Person matcher;
-    private Set<PersonMatchResult> matchMatrix = new HashSet<>();
+    private Set<PersonMatchResult> personMatchResults = new HashSet<>();
 
     public Person getMatcher() {
         return matcher;
@@ -20,12 +18,12 @@ public class MatchingAppResponse {
         this.matcher = matcher;
     }
 
-    public Set<PersonMatchResult> getMatchMatrix() {
-        return matchMatrix;
+    public Set<PersonMatchResult> getPersonMatchResults() {
+        return personMatchResults;
     }
 
-    public void setMatchMatrix(Set<PersonMatchResult> matchMatrix) {
-        this.matchMatrix = matchMatrix;
+    public void setPersonMatchResults(Set<PersonMatchResult> personMatchResults) {
+        this.personMatchResults = personMatchResults;
     }
 
     public MatchingAppResponse withMatcher(Person matcher) {
@@ -33,8 +31,8 @@ public class MatchingAppResponse {
         return this;
     }
 
-    public MatchingAppResponse withMatchMatrixRow(PersonMatchResult personMatch) {
-        this.matchMatrix.add(personMatch);
+    public MatchingAppResponse withPersonMatchResultRow(PersonMatchResult personMatch) {
+        this.personMatchResults.add(personMatch);
         return this;
     }
 }

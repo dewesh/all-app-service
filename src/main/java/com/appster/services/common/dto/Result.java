@@ -5,9 +5,9 @@ package com.appster.services.common.dto;
  */
 public class Result {
     private Integer marks;
-    private Float resultAccuracy;
+    private Double resultAccuracy;
 
-    public Result(Integer res, Float accuracy) {
+    public Result(Integer res, Double accuracy) {
         this.marks = res;
         this.resultAccuracy = accuracy;
     }
@@ -20,11 +20,11 @@ public class Result {
         this.marks = marks;
     }
 
-    public Float getResultAccuracy() {
+    public Double getResultAccuracy() {
         return resultAccuracy;
     }
 
-    public void setResultAccuracy(Float resultAccuracy) {
+    public void setResultAccuracy(Double resultAccuracy) {
         this.resultAccuracy = resultAccuracy;
     }
 }
