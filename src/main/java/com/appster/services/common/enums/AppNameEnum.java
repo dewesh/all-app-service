@@ -15,8 +15,8 @@ import java.util.List;
  * Created by dagraw2 on 6/26/18.
  */
 public enum AppNameEnum {
-    basicApp("basicApp", "basicApp", Arrays.asList(MatchAlgoEnum.NAME_MATCH, MatchAlgoEnum.PHONE_NUMBER_MATCH))
-    ,isSheTheOne("isSheTheOne","isSheTheOne",Arrays.asList(MatchAlgoEnum.NAME_MATCH));
+    basicApp("basicApp", "basicApp", Arrays.asList(MatchAlgoEnum.NAME_MATCH, MatchAlgoEnum.PHONE_NUMBER_MATCH)),
+    isSheTheOne("isSheTheOne","isSheTheOne",Arrays.asList(MatchAlgoEnum.NAME_MATCH));
 
     String appName;
     String appId;

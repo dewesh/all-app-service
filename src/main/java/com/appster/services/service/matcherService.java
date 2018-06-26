@@ -16,12 +16,8 @@ import java.util.Arrays;
 @RequestMapping("/matcherservice/")
 public class matcherService {
     @PostMapping("/match")
-    public MatchingAppResponse performMatchingOperation(MatcherAppRequestDTO requestDTO) {
-        String name = "basicApp";
-        System.out.println(requestDTO);
-        System.out.println(name);
-        System.out.println(requestDTO.toString());
-        AppNameEnum appNameEnum = Enum.valueOf(AppNameEnum.class, name);//AppNameEnum.valueOf(name);
+    public MatchingAppResponse performMatchingOperation(@RequestBody MatcherAppRequestDTO requestDTO) {
+        AppNameEnum appNameEnum = AppNameEnum.valueOf(requestDTO.getAppName());
         return appNameEnum.provideMatch(requestDTO.getMatcher(),requestDTO.getMatcheeList());
     }
     @GetMapping("/dummy")
@@ -33,4 +29,9 @@ public class matcherService {
         matcherAppRequestDTO.setMatcheeList(Arrays.asList(person));
         return matcherAppRequestDTO;
     }
+
+//    public static void main(String[] args) {
+//        AppNameEnum appNameEnum = AppNameEnum.valueOf("basicApp");
+//        System.out.println(appNameEnum.name());
+//    }
 }
